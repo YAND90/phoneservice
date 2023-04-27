@@ -1,0 +1,128 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: ilya
+      changes:
+        - createTable:
+            tableName: mobile_data
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(1024)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_available
+                  type: boolean
+                  constraints:
+                    nullable: true
+              - column:
+                  name: booked_time
+                  type: timestamp
+                  constraints:
+                    nullable: true
+              - column:
+                  name: owner
+                  type: varchar(1024)
+                  constraints:
+                    nullable: true
+  - changeSet:
+      id: 2
+      author: ilya
+      changes:
+        - insert:
+            tableName: mobile_data
+            columns:
+              - column:
+                  name: name
+                  value: Samsung Galaxy S9
+              - column:
+                  name: is_available
+                  value: true
+        - insert:
+            tableName: mobile_data
+            columns:
+              - column:
+                  name: name
+                  value: Samsung Galaxy S8
+              - column:
+                  name: is_available
+                  value: true
+        - insert:
+            tableName: mobile_data
+            columns:
+              - column:
+                  name: name
+                  value: Samsung Galaxy S8
+              - column:
+                  name: is_available
+                  value: true
+        - insert:
+            tableName: mobile_data
+            columns:
+              - column:
+                  name: name
+                  value: Motorola Nexus 6
+              - column:
+                  name: is_available
+                  value: true
+        - insert:
+            tableName: mobile_data
+            columns:
+              - column:
+                  name: name
+                  value: Oneplus 9
+              - column:
+                  name: is_available
+                  value: true
+        - insert:
+            tableName: mobile_data
+            columns:
+              - column:
+                  name: name
+                  value: Apple iPhone 13
+              - column:
+                  name: is_available
+                  value: true
+        - insert:
+            tableName: mobile_data
+            columns:
+              - column:
+                  name: name
+                  value: Apple iPhone 12
+              - column:
+                  name: is_available
+                  value: true
+        - insert:
+            tableName: mobile_data
+            columns:
+              - column:
+                  name: name
+                  value: Apple iPhone 11
+              - column:
+                  name: is_available
+                  value: true
+        - insert:
+            tableName: mobile_data
+            columns:
+              - column:
+                  name: name
+                  value: iPhone X
+              - column:
+                  name: is_available
+                  value: true
+        - insert:
+            tableName: mobile_data
+            columns:
+              - column:
+                  name: name
+                  value: Nokia 3310
+              - column:
+                  name: is_available
+                  value: true
