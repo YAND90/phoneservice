@@ -1,4 +1,5 @@
 # phoneservice
+```
 The mobile software testing team has 10 mobile phones that it needs to share for testing purposes:
   - Samsung Galaxy S9
   - 2x Samsung Galaxy S8
@@ -14,5 +15,7 @@ The mobile software testing team has 10 mobile phones that it needs to share for
   - Availability (Yes / No)
   - When it was booked
   - Who booked the phone
-
+```
+```
 Important: need to define the path for your DB in application.properties file. Example: spring.datasource.url=jdbc:h2:file:/Users/ilyayandaev/testdb
+```
