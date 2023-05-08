@@ -9,7 +9,7 @@
 		{
 			"name": "return mobile",
 			"request": {
-				"method": "PUT",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/release?phone=Samsung Galaxy S8&owner=YAND",
@@ -63,7 +63,7 @@
 		{
 			"name": "get mobile",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": "http://localhost:8080/book?phone=Samsung Galaxy S8&owner=YAND",

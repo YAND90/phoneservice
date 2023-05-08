@@ -17,17 +17,33 @@ import java.util.List;
 public class MobileController {
     @Autowired
     IMobileManager mobileManager;
+
+    /**
+     * Lists information about all phones
+     * @return List of mobiles data
+     */
     @RequestMapping(value = "/list", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody List<MobileData> list() {
         return mobileManager.list();
     }
 
+    /**
+     * Lists information about phones with the specified name (@phone)
+     * @param phone - String - name of the phone
+     * @return List of mobiles data
+     */
     @RequestMapping(value = "/listPhone", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody List<MobileData> listPhone(@RequestParam(name="phone") String phone) {
         return mobileManager.list(phone);
     }
 
-    @RequestMapping(value = "/book", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    /**
+     * Books phone using @phone and @owner
+     * @param phone - String - name of the phone
+     * @param owner - String - owner name who wants to book the phone
+     * @return OK/BAD_REQUEST
+     */
+    @RequestMapping(value = "/book", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ResponseEntity<String> book(@RequestParam(name="phone") String phone, @RequestParam(name="owner") String owner) {
         try {
             mobileManager.book(phone, owner);
@@ -37,7 +53,13 @@ public class MobileController {
         }
     }
 
-    @RequestMapping(value = "/release", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
+    /**
+     * Returns phone using @phone and @owner
+     * @param phone - String - name of the phone
+     * @param owner - String - owner who wants to return the phone
+     * @return OK/BAD_REQUEST
+     */
+    @RequestMapping(value = "/release", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ResponseEntity<String> release(@RequestParam(name="phone") String phone, @RequestParam(name="owner") String owner) {
         try {
             mobileManager.release(phone, owner);

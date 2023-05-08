@@ -1,7 +1,7 @@
 package com.app.phoneservice.managers;
 
 import com.app.phoneservice.data.MobileData;
-import com.app.phoneservice.data.MobileDataRepository;
+import com.app.phoneservice.data.IMobileDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +10,7 @@ import java.util.Optional;
 @Component
 public class MobileDataManager implements IMobileDataManager {
     @Autowired
-    MobileDataRepository repository;
+    IMobileDataRepository repository;
     @Override
     public Optional<MobileData> getAvailablePhone(String phone) {
         return repository.findFirst1ByNameAndIsAvailable(phone, true);

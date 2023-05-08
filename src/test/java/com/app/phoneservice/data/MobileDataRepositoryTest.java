@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MobileDataRepositoryTest {
 
     @Autowired
-    private MobileDataRepository mobileDataRepository;
+    private IMobileDataRepository mobileDataRepository;
 
     @Before
     public void setUp() {
