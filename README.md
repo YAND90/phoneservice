@@ -17,5 +17,12 @@ The mobile software testing team has 10 mobile phones that it needs to share for
   - Who booked the phone
 ```
 ```
-Important: need to define the path for your DB in application.properties file. Example: spring.datasource.url=jdbc:h2:file:/Users/ilyayandaev/testdb
+How to run:
+You must have MVN and JAVA 17 installed. (MacOS tip: export JAVA_HOME=$(/usr/libexec/java_home -v 17))
+cd <project dir>
+mvn clean compile install
+java -jar phoneservice-0.0.1-SNAPSHOT.jar
+
+By default application uses in-memory H2 db. If you want for persistence on FS, then you need to override spring property: 'spring.datasource.url'.
+You can do this in applicatio.properties file or inject it in start commandline(example: java -jar phoneservice-0.0.1-SNAPSHOT.jar -spring.datasource.url=jdbc:h2:<path>:testdb)
 ```
