@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "6f6dcc09-56e2-487f-be6e-b9d8531ee721",
+		"name": "tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4552640"
+	},
+	"item": [
+		{
+			"name": "return mobile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/release?phone=Samsung Galaxy S8&owner=YAND",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"release"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "Samsung Galaxy S8"
+						},
+						{
+							"key": "owner",
+							"value": "YAND"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list phone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/listPhone?phone=Samsung Galaxy S8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"listPhone"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "Samsung Galaxy S8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get mobile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book?phone=Samsung Galaxy S8&owner=YAND",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "Samsung Galaxy S8"
+						},
+						{
+							"key": "owner",
+							"value": "YAND"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
