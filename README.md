@@ -16,7 +16,7 @@ The mobile software testing team has 10 mobile phones that it needs to share for
   - When it was booked
   - Who booked the phone
 ```
-#How to run:
+# How to run:
 ```
 You must have MVN and JAVA 17 installed. (MacOS tip: export JAVA_HOME=$(/usr/libexec/java_home -v 17))
 cd <project dir>
@@ -27,7 +27,7 @@ java -jar phoneservice-0.0.1-SNAPSHOT.jar
 By default application uses in-memory H2 db. If you want for persistence on FS, then you need to override spring property: 'spring.datasource.url'.
 You can do this in applicatio.properties file or inject it in start commandline(example: java -jar phoneservice-0.0.1-SNAPSHOT.jar -spring.datasource.url=jdbc:h2:<path>:testdb)
 ```
-#How to use:
+# How to use:
 ```
 Project has postman collection for using the service: <project_dir>/src/main/resources/postman/tests.postman_collection.json
 ```
